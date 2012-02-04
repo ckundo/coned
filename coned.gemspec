@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
     "LICENSE.txt",
     "README.rdoc",
     "Rakefile",
+    "coned.gemspec",
     "lib/coned.rb",
     "spec/coned_spec.rb",
     "spec/spec_helper.rb"
