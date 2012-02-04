@@ -1,6 +1,6 @@
 = coned
 
-Description goes here.
+This gem consumes a feed of realtime outage data from the Coned website for NYC.
 
 == Contributing to coned
  
