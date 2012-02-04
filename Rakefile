@@ -17,7 +17,7 @@ Jeweler::Tasks.new do |gem|
   gem.name = "coned"
   gem.homepage = "http://github.com/ckundo/coned"
   gem.license = "MIT"
-  gem.summary = %Q{A wrapper for the unofficial Coned NYC API}
+  gem.summary = %Q{A wrapper for Coned NYC outage feeds.}
   gem.description = %Q{This gem consumes a feed of realtime outage data from the Coned website for NYC}
   gem.email = "ckundo@gmail.com"
   gem.authors = ["Cameron Cundiff"]
