@@ -33,7 +33,7 @@ Gem::Specification.new do |s|
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.11"
-  s.summary = "A wrapper for Coned NYC outage feeds."
+  s.summary = "A wrapper for the unofficial Coned NYC API"
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
