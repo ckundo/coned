@@ -22,13 +22,19 @@ This gem consumes a feed of realtime outage data for NYC from the Con Ed website
   # Staten Island: 0 outages
   # Westchester: 0 outages
 
-  c.data.areas.first.areas[0..5] {|a| puts "#{a.area_name}: #{a.custs_out} outages"}
-  # Central Bronx: 0 outages
-  # Fordham: 0 outages
-  # Northeast Bronx: 0 outages
-  # Riverdale: 0 outages
-  # Southeast Bronx: 0 outages
-  
+  c.brooklyn.areas.each {|a| puts "#{a.area_name}: #{a.custs_out} outages"}
+  # Bay Ridge: 0 outages
+  # Borough Hall: 0 outages
+  # Brighton Beach: 0 outages
+  # Crown Heights: 0 outages
+  # Flatbush: 0 outages
+  # Ocean Parkway: 0 outages
+  # Park Slope: 0 outages
+  # Prospect Park: 0 outages
+  # Ridgewood: 0 outages
+  # Sheepshead Bay: 0 outages
+  # Williamsburg: 1 outages
+
 == Requirements
 
 * JSON
