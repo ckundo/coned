@@ -31,8 +31,118 @@ This gem consumes a feed of realtime outage data for NYC from the Con Ed website
     Southeast Bronx ==> 0
     West Bronx ==> 0
   Brooklyn ==> 1
-    ...
-
+    Bay Ridge ==> 1
+    Borough Hall ==> 0
+    Brighton Beach ==> 0
+    Crown Heights ==> 0
+    Flatbush ==> 0
+    Ocean Parkway ==> 0
+    Park Slope ==> 0
+    Prospect Park ==> 0
+    Ridgewood ==> 0
+    Sheepshead Bay ==> 0
+    Williamsburg ==> 0
+  Manhattan ==> 0
+    Battery Park City ==> 0
+    Beekman ==> 0
+    Bowling Green ==> 0
+    Canal ==> 0
+    Central Park ==> 0
+    Chelsea ==> 0
+    City Hall ==> 0
+    Columbus Circle ==> 0
+    Cooper Square ==> 0
+    Cortlandt ==> 0
+    Empire ==> 0
+    Fashion ==> 0
+    Freedom ==> 0
+    Fulton ==> 0
+    Grand Central ==> 0
+    Greeley Square ==> 0
+    Greenwich ==> 0
+    Harlem ==> 0
+    Herald Square ==> 0
+    Hudson ==> 0
+    Hunter ==> 0
+    Kips Bay ==> 0
+    Lenox Hill ==> 0
+    Lincoln Square ==> 0
+    Madison Square ==> 0
+    Park Place ==> 0
+    Pennsylvania ==> 0
+    Plaza ==> 0
+    Randalls Island ==> 0
+    Rockefeller Center ==> 0
+    Roosevelt ==> 0
+    Sheridan Square ==> 0
+    Sutton ==> 0
+    Times Square ==> 0
+    Triboro ==> 0
+    Turtle Bay ==> 0
+    Washington Heights ==> 0
+    Yorkville ==> 0
+  Queens ==> 0
+    Borden ==> 0
+    Flushing ==> 0
+    Jackson Heights ==> 0
+    Jamaica ==> 0
+    Long Island City ==> 0
+    Maspeth ==> 0
+    Rego Park ==> 0
+    Richmond Hill ==> 0
+    Sunnyside ==> 0
+  Staten Island ==> 0
+    Fox Hills ==> 0
+    Fresh Kills ==> 0
+    Wainwright ==> 0
+    Willowbrook ==> 0
+    Woodrow ==> 0
+  Westchester ==> 0
+    Ardsley Village ==> 0
+    Bedford town ==> 0
+    Briarcliff Manor village ==> 0
+    Briarcliff Ossining ==> 0
+    Bronxville village ==> 0
+    Buchanan village ==> 0
+    Cortlandt town ==> 0
+    Croton-on-Hudson village ==> 0
+    Dobbs Ferry village ==> 0
+    Eastchester town ==> 0
+    Elmsford village ==> 0
+    Greenburgh town ==> 0
+    Harrison village ==> 0
+    Hastings-on-Hudson village ==> 0
+    Irvington village ==> 0
+    Larchmont village ==> 0
+    Mamaroneck town ==> 0
+    Mamaroneck village ==> 0
+    Mount Kisco (Town of Bedford) ==> 0
+    Mount Kisco (Town of New Castle) ==> 0
+    Mount Kisco village ==> 0
+    Mount Pleasant town ==> 0
+    Mount Vernon city ==> 0
+    New Castle town ==> 0
+    New Rochelle city ==> 0
+    North Castle town ==> 0
+    North Pelham ==> 0
+    Ossining town ==> 0
+    Ossining village ==> 0
+    Peekskill city ==> 0
+    Pelham Manor village ==> 0
+    Pelham village ==> 0
+    Pleasantville village ==> 0
+    Port Chester village ==> 0
+    Rye Brook village ==> 0
+    Rye city ==> 0
+    Rye town ==> 0
+    Scarsdale village ==> 0
+    Sleepy Hollow ==> 0
+    Somers town ==> 0
+    Tarrytown village ==> 0
+    Tuckahoe village ==> 0
+    White Plains city ==> 0
+    Yonkers city ==> 0
+    Yorktown town ==> 0
 == Requirements
 
 * HTTParty
