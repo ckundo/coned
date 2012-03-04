@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "coned"
-  s.version = ""
+  s.version = "0.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Cameron Cundiff"]
-  s.date = "2012-02-04"
+  s.date = "2012-03-04"
   s.description = "This gem consumes a feed of realtime outage data from the Coned website for NYC"
   s.email = "ckundo@gmail.com"
   s.extra_rdoc_files = [
@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
     "LICENSE.txt",
     "README.rdoc",
     "Rakefile",
+    "VERSION",
     "coned.gemspec",
     "lib/coned.rb",
     "spec/coned_spec.rb",
@@ -32,7 +33,7 @@ Gem::Specification.new do |s|
   s.homepage = "http://github.com/ckundo/coned"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = "1.8.11"
+  s.rubygems_version = "1.8.16"
   s.summary = "A wrapper for Coned NYC outage feeds."
 
   if s.respond_to? :specification_version then
