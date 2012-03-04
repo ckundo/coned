@@ -5,7 +5,7 @@ This gem consumes a feed of realtime outage data for NYC from the Con Ed website
 == Features
 
 * Outages by area (Bronx, Brooklyn, Manhattan, Queens, Staten Island, Westchester)
-* Outages by neighborhood with areas
+* Outages by neighborhoods within areas
 * Estimated time to recovery for outages
 
 == Usage
