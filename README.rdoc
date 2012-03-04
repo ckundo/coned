@@ -1,6 +1,39 @@
 = coned
 
-This gem consumes a feed of realtime outage data from the Coned website for NYC.
+This gem consumes a feed of realtime outage data for NYC from the Con Ed website.
+
+== Features
+
+* Outages by borough
+* Outages by neighborhood
+* Estimated time to recovery
+
+== Usage
+  require 'coned'
+
+  c = Coned.new
+  response = c.fetch
+  
+  response["file_data"]["curr_custs_aff"]["areas"][0]["areas"].each do |area|
+    puts "#{area['area_name']} ==> #{area['custs_out']}"
+    area['areas'].each do |neighborhood|
+      puts "  #{neighborhood['area_name']} ==> #{neighborhood['custs_out']}"
+    end
+  end
+ 
+== Requirements
+
+* HTTParty
+
+== Installation (Rails 3.1 and higher)
+
+Add to your Gemfile:
+
+  gem 'coned', :git => 'git://github.com/ckundo/coned.git'
+
+Then run:
+
+  $ bundle install
 
 == Contributing to coned
  
