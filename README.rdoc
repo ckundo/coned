@@ -14,14 +14,21 @@ This gem consumes a feed of realtime outage data for NYC from the Con Ed website
   c = Coned.new
   c.fetch
   
-  c.data.areas.each {|a| puts a.area_name} 
-  # => Bronx 
-  # => Brooklyn 
-  # => Manhattan 
-  # => Queens 
-  # => Staten Island 
-  # => Westchester
-    
+  c.data.areas.each {|a| puts "#{a.area_name}: #{a.custs_out} outages"} 
+  # Bronx: 0 outages
+  # Brooklyn: 1 outages
+  # Manhattan: 0 outages
+  # Queens: 2 outages
+  # Staten Island: 0 outages
+  # Westchester: 0 outages
+
+  c.data.areas.first.areas[0..5] {|a| puts "#{a.area_name}: #{a.custs_out} outages"}
+  # Central Bronx: 0 outages
+  # Fordham: 0 outages
+  # Northeast Bronx: 0 outages
+  # Riverdale: 0 outages
+  # Southeast Bronx: 0 outages
+  
 == Requirements
 
 * JSON
