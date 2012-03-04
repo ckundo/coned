@@ -14,7 +14,8 @@ Gem::Specification.new do |s|
   s.email = "ckundo@gmail.com"
   s.extra_rdoc_files = [
     "LICENSE.txt",
-    "README.md"
+    "README.md",
+    "README.rdoc"
   ]
   s.files = [
     ".document",
@@ -23,6 +24,7 @@ Gem::Specification.new do |s|
     "Gemfile.lock",
     "LICENSE.txt",
     "README.md",
+    "README.rdoc",
     "Rakefile",
     "VERSION",
     "coned.gemspec",
