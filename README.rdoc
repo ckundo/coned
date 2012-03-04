@@ -9,6 +9,7 @@ This gem consumes a feed of realtime outage data for NYC from the Con Ed website
 * Estimated time to recovery
 
 == Usage
+=== example
   require 'coned'
 
   c = Coned.new
@@ -20,7 +21,18 @@ This gem consumes a feed of realtime outage data for NYC from the Con Ed website
       puts "  #{neighborhood['area_name']} ==> #{neighborhood['custs_out']}"
     end
   end
- 
+
+=== output
+  Bronx ==> 0
+    Central Bronx ==> 0
+    Fordham ==> 0
+    Northeast Bronx ==> 0
+    Riverdale ==> 0
+    Southeast Bronx ==> 0
+    West Bronx ==> 0
+  Brooklyn ==> 1
+    ...
+
 == Requirements
 
 * HTTParty
