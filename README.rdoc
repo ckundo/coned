@@ -4,16 +4,17 @@ This gem consumes a feed of realtime outage data for NYC from the Con Ed website
 
 == Features
 
-* Outages by borough
-* Outages by neighborhood
-* Estimated time to recovery
+* Outages by area (Bronx, Brooklyn, Manhattan, Queens, Staten Island, Westchester)
+* Outages by neighborhood with areas
+* Estimated time to recovery for outages
 
 == Usage
 
   require 'coned'
   c = Coned.new
   c.fetch
-  
+
+=== Areas  
   c.data.areas.each {|a| puts "#{a.area_name}: #{a.custs_out} outages"} 
   # Bronx: 0 outages
   # Brooklyn: 1 outages
@@ -22,6 +23,7 @@ This gem consumes a feed of realtime outage data for NYC from the Con Ed website
   # Staten Island: 0 outages
   # Westchester: 0 outages
 
+=== Neighborhoods
   c.brooklyn.areas.each {|a| puts "#{a.area_name}: #{a.custs_out} outages"}
   # Bay Ridge: 0 outages
   # Borough Hall: 0 outages
@@ -34,6 +36,9 @@ This gem consumes a feed of realtime outage data for NYC from the Con Ed website
   # Ridgewood: 0 outages
   # Sheepshead Bay: 0 outages
   # Williamsburg: 1 outages
+
+=== Estimated time to recovery
+  c.brooklyn.areas.last.etr # => "Mar 4, 6:00 PM"
 
 == Requirements
 
