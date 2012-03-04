@@ -10,139 +10,19 @@ This gem consumes a feed of realtime outage data for NYC from the Con Ed website
 
 == Usage
 === example
+  ```ruby
   require 'coned'
 
   c = Coned.new
   response = c.fetch
-  
-  response["file_data"]["curr_custs_aff"]["areas"][0]["areas"].each do |area|
-    puts "#{area['area_name']} ==> #{area['custs_out']}"
-    area['areas'].each do |neighborhood|
-      puts "  #{neighborhood['area_name']} ==> #{neighborhood['custs_out']}"
-    end
-  end
+  puts response
+  ```
 
 === output
-  Bronx ==> 0
-    Central Bronx ==> 0
-    Fordham ==> 0
-    Northeast Bronx ==> 0
-    Riverdale ==> 0
-    Southeast Bronx ==> 0
-    West Bronx ==> 0
-  Brooklyn ==> 1
-    Bay Ridge ==> 1
-    Borough Hall ==> 0
-    Brighton Beach ==> 0
-    Crown Heights ==> 0
-    Flatbush ==> 0
-    Ocean Parkway ==> 0
-    Park Slope ==> 0
-    Prospect Park ==> 0
-    Ridgewood ==> 0
-    Sheepshead Bay ==> 0
-    Williamsburg ==> 0
-  Manhattan ==> 0
-    Battery Park City ==> 0
-    Beekman ==> 0
-    Bowling Green ==> 0
-    Canal ==> 0
-    Central Park ==> 0
-    Chelsea ==> 0
-    City Hall ==> 0
-    Columbus Circle ==> 0
-    Cooper Square ==> 0
-    Cortlandt ==> 0
-    Empire ==> 0
-    Fashion ==> 0
-    Freedom ==> 0
-    Fulton ==> 0
-    Grand Central ==> 0
-    Greeley Square ==> 0
-    Greenwich ==> 0
-    Harlem ==> 0
-    Herald Square ==> 0
-    Hudson ==> 0
-    Hunter ==> 0
-    Kips Bay ==> 0
-    Lenox Hill ==> 0
-    Lincoln Square ==> 0
-    Madison Square ==> 0
-    Park Place ==> 0
-    Pennsylvania ==> 0
-    Plaza ==> 0
-    Randalls Island ==> 0
-    Rockefeller Center ==> 0
-    Roosevelt ==> 0
-    Sheridan Square ==> 0
-    Sutton ==> 0
-    Times Square ==> 0
-    Triboro ==> 0
-    Turtle Bay ==> 0
-    Washington Heights ==> 0
-    Yorkville ==> 0
-  Queens ==> 0
-    Borden ==> 0
-    Flushing ==> 0
-    Jackson Heights ==> 0
-    Jamaica ==> 0
-    Long Island City ==> 0
-    Maspeth ==> 0
-    Rego Park ==> 0
-    Richmond Hill ==> 0
-    Sunnyside ==> 0
-  Staten Island ==> 0
-    Fox Hills ==> 0
-    Fresh Kills ==> 0
-    Wainwright ==> 0
-    Willowbrook ==> 0
-    Woodrow ==> 0
-  Westchester ==> 0
-    Ardsley Village ==> 0
-    Bedford town ==> 0
-    Briarcliff Manor village ==> 0
-    Briarcliff Ossining ==> 0
-    Bronxville village ==> 0
-    Buchanan village ==> 0
-    Cortlandt town ==> 0
-    Croton-on-Hudson village ==> 0
-    Dobbs Ferry village ==> 0
-    Eastchester town ==> 0
-    Elmsford village ==> 0
-    Greenburgh town ==> 0
-    Harrison village ==> 0
-    Hastings-on-Hudson village ==> 0
-    Irvington village ==> 0
-    Larchmont village ==> 0
-    Mamaroneck town ==> 0
-    Mamaroneck village ==> 0
-    Mount Kisco (Town of Bedford) ==> 0
-    Mount Kisco (Town of New Castle) ==> 0
-    Mount Kisco village ==> 0
-    Mount Pleasant town ==> 0
-    Mount Vernon city ==> 0
-    New Castle town ==> 0
-    New Rochelle city ==> 0
-    North Castle town ==> 0
-    North Pelham ==> 0
-    Ossining town ==> 0
-    Ossining village ==> 0
-    Peekskill city ==> 0
-    Pelham Manor village ==> 0
-    Pelham village ==> 0
-    Pleasantville village ==> 0
-    Port Chester village ==> 0
-    Rye Brook village ==> 0
-    Rye city ==> 0
-    Rye town ==> 0
-    Scarsdale village ==> 0
-    Sleepy Hollow ==> 0
-    Somers town ==> 0
-    Tarrytown village ==> 0
-    Tuckahoe village ==> 0
-    White Plains city ==> 0
-    Yonkers city ==> 0
-    Yorktown town ==> 0
+  ```json  
+  {"file_title"=>"report", "file_data"=>{"curr_custs_aff"=>{"areas"=>[{"area_name"=>"CONED", "areas"=>[{"area_name"=>"Bronx", "areas"=>[{"area_name"=>"Central Bronx", "custs_out"=>0, "total_custs"=>44452, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Fordham", "custs_out"=>0, "total_custs"=>114772, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Northeast Bronx", "custs_out"=>0, "total_custs"=>79942, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Riverdale", "custs_out"=>0, "total_custs"=>34772, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Southeast Bronx", "custs_out"=>0, "total_custs"=>89736, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"West Bronx", "custs_out"=>0, "total_custs"=>62352, "etr"=>"", "etrmillis"=>-9}], "custs_out"=>0, "total_custs"=>426026, "etr"=>"", "etrmillis"=>-9, "latitude"=>40.86, "longitude"=>-73.86}, {"area_name"=>"Brooklyn", "areas"=>[{"area_name"=>"Bay Ridge", "custs_out"=>1, "total_custs"=>93430, "etr"=>"Pending", "etrmillis"=>-1, "latitude"=>40.62, "longitude"=>-74.0}, {"area_name"=>"Borough Hall", "custs_out"=>0, "total_custs"=>52631, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Brighton Beach", "custs_out"=>0, "total_custs"=>27831, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Crown Heights", "custs_out"=>0, "total_custs"=>84214, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Flatbush", "custs_out"=>0, "total_custs"=>135665, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Ocean Parkway", "custs_out"=>0, "total_custs"=>117965, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Park Slope", "custs_out"=>0, "total_custs"=>114131, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Prospect Park", "custs_out"=>0, "total_custs"=>32124, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Ridgewood", "custs_out"=>0, "total_custs"=>89163, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Sheepshead Bay", "custs_out"=>0, "total_custs"=>63947, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Williamsburg", "custs_out"=>0, "total_custs"=>94606, "etr"=>"", "etrmillis"=>-9}], "custs_out"=>1, "total_custs"=>1026426, "etr"=>"Pending", "etrmillis"=>-1, "latitude"=>40.66, "longitude"=>-73.91}, {"area_name"=>"Manhattan", "areas"=>[{"area_name"=>"Battery Park City", "custs_out"=>0, "total_custs"=>5085, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Beekman", "custs_out"=>0, "total_custs"=>9282, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Bowling Green", "custs_out"=>0, "total_custs"=>2588, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Canal", "custs_out"=>0, "total_custs"=>8459, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Central Park", "custs_out"=>0, "total_custs"=>78081, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Chelsea", "custs_out"=>0, "total_custs"=>27166, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"City Hall", "custs_out"=>0, "total_custs"=>8787, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Columbus Circle", "custs_out"=>0, "total_custs"=>19719, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Cooper Square", "custs_out"=>0, "total_custs"=>66638, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Cortlandt", "custs_out"=>0, "total_custs"=>1891, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Empire", "custs_out"=>0, "total_custs"=>3615, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Fashion", "custs_out"=>0, "total_custs"=>6334, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Freedom", "custs_out"=>0, "total_custs"=>1, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Fulton", "custs_out"=>0, "total_custs"=>3907, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Grand Central", "custs_out"=>0, "total_custs"=>4854, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Greeley Square", "custs_out"=>0, "total_custs"=>3017, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Greenwich", "custs_out"=>0, "total_custs"=>10112, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Harlem", "custs_out"=>0, "total_custs"=>58708, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Herald Square", "custs_out"=>0, "total_custs"=>1344, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Hudson", "custs_out"=>0, "total_custs"=>2240, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Hunter", "custs_out"=>0, "total_custs"=>8159, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Kips Bay", "custs_out"=>0, "total_custs"=>21413, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Lenox Hill", "custs_out"=>0, "total_custs"=>43908, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Lincoln Square", "custs_out"=>0, "total_custs"=>23010, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Madison Square", "custs_out"=>0, "total_custs"=>30304, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Park Place", "custs_out"=>0, "total_custs"=>4776, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Pennsylvania", "custs_out"=>0, "total_custs"=>12281, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Plaza", "custs_out"=>0, "total_custs"=>6370, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Randalls Island", "custs_out"=>0, "total_custs"=>9, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Rockefeller Center", "custs_out"=>0, "total_custs"=>830, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Roosevelt", "custs_out"=>0, "total_custs"=>8721, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Sheridan Square", "custs_out"=>0, "total_custs"=>38460, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Sutton", "custs_out"=>0, "total_custs"=>10503, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Times Square", "custs_out"=>0, "total_custs"=>2554, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Triboro", "custs_out"=>0, "total_custs"=>36684, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Turtle Bay", "custs_out"=>0, "total_custs"=>879, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Washington Heights", "custs_out"=>0, "total_custs"=>68971, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Yorkville", "custs_out"=>0, "total_custs"=>79879, "etr"=>"", "etrmillis"=>-9}], "custs_out"=>0, "total_custs"=>719539, "etr"=>"", "etrmillis"=>-9, "latitude"=>40.76, "longitude"=>-73.97}, {"area_name"=>"Queens", "areas"=>[{"area_name"=>"Borden", "custs_out"=>0, "total_custs"=>12267, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Flushing", "custs_out"=>0, "total_custs"=>119742, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Jackson Heights", "custs_out"=>0, "total_custs"=>71263, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Jamaica", "custs_out"=>0, "total_custs"=>147658, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Long Island City", "custs_out"=>0, "total_custs"=>73785, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Maspeth", "custs_out"=>0, "total_custs"=>107094, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Rego Park", "custs_out"=>0, "total_custs"=>70828, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Richmond Hill", "custs_out"=>0, "total_custs"=>120719, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Sunnyside", "custs_out"=>0, "total_custs"=>24571, "etr"=>"", "etrmillis"=>-9}], "custs_out"=>0, "total_custs"=>627208, "etr"=>"", "etrmillis"=>-9, "latitude"=>40.71, "longitude"=>-73.86}, {"area_name"=>"Staten Island", "areas"=>[{"area_name"=>"Fox Hills", "custs_out"=>0, "total_custs"=>59350, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Fresh Kills", "custs_out"=>0, "total_custs"=>38152, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Wainwright", "custs_out"=>0, "total_custs"=>24613, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Willowbrook", "custs_out"=>0, "total_custs"=>23936, "etr"=>"", "etrmillis"=>-9}, {"area_name"=>"Woodrow", "custs_out"=>0, "total_custs"=>28151, "etr"=>"", "etrmillis"=>-9}], "custs_out"=>0, "total_custs"=>174202, "etr"=>"", "etrmillis"=>-9, "latitude"=>40.57, "longitude"=>-74.17}, {"area_name"=>"Westchester", "areas"=>[{"area_name"=>"Ardsley Village", "custs_out"=>0, "total_custs"=>1786, "etr"=>"", "etrmillis"=>-9, "latitude"=>41.0, "longitude"=>-73.83}, {"area_name"=>"Bedford town", "custs_out"=>0, "total_custs"=>1018, "etr"=>"", "etrmillis"=>-9, "latitude"=>41.2, "longitude"=>-73.7}, {"area_name"=>"Briarcliff Manor village", "custs_out"=>0, "total_custs"=>2964, "etr"=>"", "etrmillis"=>-9, "latitude"=>41.13, "longitude"=>-73.82}, {"area_name"=>"Briarcliff Ossining", "custs_out"=>0, "total_custs"=>0, "etr"=>"", "etrmillis"=>-9, "latitude"=>41.17, "longitude"=>-73.83}, {"area_name"=>"Bronxville village", "custs_out"=>0, "total_custs"=>2529, "etr"=>"", "etrmillis"=>-9, "latitude"=>40.94, "longitude"=>-73.8}, {"area_name"=>"Buchanan village", "custs_out"=>0, "total_custs"=>1010, "etr"=>"", "etrmillis"=>-9, "latitude"=>41.25, "longitude"=>-73.93}, {"area_name"=>"Cortlandt town", "custs_out"=>0, "total_custs"=>12295, "etr"=>"", "etrmillis"=>-9, "latitude"=>40.25, "longitude"=>-73.89}, {"area_name"=>"Croton-on-Hudson village", "custs_out"=>0, "total_custs"=>3629, "etr"=>"", "etrmillis"=>-9, "latitude"=>41.19, "longitude"=>-73.87}, {"area_name"=>"Dobbs Ferry village", "custs_out"=>0, "total_custs"=>4153, "etr"=>"", "etrmillis"=>-9, "latitude"=>41.0, "longitude"=>-73.83}, {"area_name"=>"Eastchester town", "custs_out"=>0, "total_custs"=>7900, "etr"=>"", "etrmillis"=>-9, "latitude"=>40.95, "longitude"=>-73.79}, {"area_name"=>"Elmsford village", "custs_out"=>0, "total_custs"=>2104, "etr"=>"", "etrmillis"=>-9, "latitude"=>41.04, "longitude"=>-73.79}, {"area_name"=>"Greenburgh town", "custs_out"=>0, "total_custs"=>18736, "etr"=>"", "etrmillis"=>-9, "latitude"=>41.04, "longitude"=>-73.79}, {"area_name"=>"Harrison village", "custs_out"=>0, "total_custs"=>9470, "etr"=>"", "etrmillis"=>-9, "latitude"=>41.01, "longitude"=>-73.68}, {"area_name"=>"Hastings-on-Hudson village", "custs_out"=>0, "total_custs"=>3436, "etr"=>"", "etrmillis"=>-9, "latitude"=>40.98, "longitude"=>-73.85}, {"area_name"=>"Irvington village", "custs_out"=>0, "total_custs"=>2632, "etr"=>"", "etrmillis"=>-9, "latitude"=>41.02, "longitude"=>-73.83}, {"area_name"=>"Larchmont village", "custs_out"=>0, "total_custs"=>1983, "etr"=>"", "etrmillis"=>-9, "latitude"=>40.91, "longitude"=>-73.72}, {"area_name"=>"Mamaroneck town", "custs_out"=>0, "total_custs"=>5259, "etr"=>"", "etrmillis"=>-9, "latitude"=>40.94, "longitude"=>-73.72}, {"area_name"=>"Mamaroneck village", "custs_out"=>0, "total_custs"=>8704, "etr"=>"", "etrmillis"=>-9, "latitude"=>40.94, "longitude"=>-73.72}, {"area_name"=>"Mount Kisco (Town of Bedford)", "custs_out"=>0, "total_custs"=>0, "etr"=>"", "etrmillis"=>-9, "latitude"=>41.2, "longitude"=>-73.7}, {"area_name"=>"Mount Kisco (Town of New Castle)", "custs_out"=>0, "total_custs"=>0, "etr"=>"", "etrmillis"=>-9, "latitude"=>41.18, "longitude"=>-73.76}, {"area_name"=>"Mount Kisco village", "custs_out"=>0, "total_custs"=>5075, "etr"=>"", "etrmillis"=>-9, "latitude"=>40.19, "longitude"=>-73.71}, {"area_name"=>"Mount Pleasant town", "custs_out"=>0, "total_custs"=>8783, "etr"=>"", "etrmillis"=>-9, "latitude"=>41.1, "longitude"=>-73.78}, {"area_name"=>"Mount Vernon city", "custs_out"=>0, "total_custs"=>29297, "etr"=>"", "etrmillis"=>-9, "latitude"=>40.9, "longitude"=>-73.8}, {"area_name"=>"New Castle town", "custs_out"=>0, "total_custs"=>6574, "etr"=>"", "etrmillis"=>-9, "latitude"=>41.18, "longitude"=>-73.76}, {"area_name"=>"New Rochelle city", "custs_out"=>0, "total_custs"=>28958, "etr"=>"", "etrmillis"=>-9, "latitude"=>40.92, "longitude"=>-73.75}, {"area_name"=>"North Castle town", "custs_out"=>0, "total_custs"=>4894, "etr"=>"", "etrmillis"=>-9, "latitude"=>41.18, "longitude"=>-73.77}, {"area_name"=>"North Pelham", "custs_out"=>0, "total_custs"=>2071, "etr"=>"", "etrmillis"=>-9, "latitude"=>40.89, "longitude"=>-73.78}, {"area_name"=>"Ossining town", "custs_out"=>0, "total_custs"=>2307, "etr"=>"", "etrmillis"=>-9, "latitude"=>41.15, "longitude"=>-73.84}, {"area_name"=>"Ossining village", "custs_out"=>0, "total_custs"=>8980, "etr"=>"", "etrmillis"=>-9, "latitude"=>41.15, "longitude"=>-73.84}, {"area_name"=>"Peekskill city", "custs_out"=>0, "total_custs"=>10239, "etr"=>"", "etrmillis"=>-9, "latitude"=>41.28, "longitude"=>-73.83}, {"area_name"=>"Pelham Manor village", "custs_out"=>0, "total_custs"=>2051, "etr"=>"", "etrmillis"=>-9, "latitude"=>40.89, "longitude"=>-73.78}, {"area_name"=>"Pelham village", "custs_out"=>0, "total_custs"=>760, "etr"=>"", "etrmillis"=>-9, "latitude"=>40.89, "longitude"=>-73.78}, {"area_name"=>"Pleasantville village", "custs_out"=>0, "total_custs"=>3338, "etr"=>"", "etrmillis"=>-9, "latitude"=>41.13, "longitude"=>-73.76}, {"area_name"=>"Port Chester village", "custs_out"=>0, "total_custs"=>10254, "etr"=>"", "etrmillis"=>-9, "latitude"=>40.99, "longitude"=>-73.63}, {"area_name"=>"Rye Brook village", "custs_out"=>0, "total_custs"=>3720, "etr"=>"", "etrmillis"=>-9, "latitude"=>41.02, "longitude"=>-73.66}, {"area_name"=>"Rye city", "custs_out"=>0, "total_custs"=>6070, "etr"=>"", "etrmillis"=>-9, "latitude"=>40.99, "longitude"=>-73.66}, {"area_name"=>"Rye town", "custs_out"=>0, "total_custs"=>0, "etr"=>"", "etrmillis"=>-9, "latitude"=>40.96, "longitude"=>-73.65}, {"area_name"=>"Scarsdale village", "custs_out"=>0, "total_custs"=>6025, "etr"=>"", "etrmillis"=>-9, "latitude"=>40.98, "longitude"=>-73.75}, {"area_name"=>"Sleepy Hollow", "custs_out"=>0, "total_custs"=>3515, "etr"=>"", "etrmillis"=>-9, "latitude"=>41.08, "longitude"=>-73.84}, {"area_name"=>"Somers town", "custs_out"=>0, "total_custs"=>0, "etr"=>"", "etrmillis"=>-9, "latitude"=>41.1, "longitude"=>-73.78}, {"area_name"=>"Tarrytown village", "custs_out"=>0, "total_custs"=>5217, "etr"=>"", "etrmillis"=>-9, "latitude"=>41.05, "longitude"=>-73.84}, {"area_name"=>"Tuckahoe village", "custs_out"=>0, "total_custs"=>2867, "etr"=>"", "etrmillis"=>-9, "latitude"=>40.94, "longitude"=>-73.8}, {"area_name"=>"White Plains city", "custs_out"=>0, "total_custs"=>23854, "etr"=>"", "etrmillis"=>-9, "latitude"=>41.02, "longitude"=>-73.73}, {"area_name"=>"Yonkers city", "custs_out"=>0, "total_custs"=>75568, "etr"=>"", "etrmillis"=>-9, "latitude"=>40.94, "longitude"=>-73.85}, {"area_name"=>"Yorktown town", "custs_out"=>0, "total_custs"=>8173, "etr"=>"", "etrmillis"=>-9, "latitude"=>41.26, "longitude"=>-73.79}], "custs_out"=>0, "total_custs"=>348198, "etr"=>"", "etrmillis"=>-9, "latitude"=>41.01, "longitude"=>-73.78}], "custs_out"=>0, "total_custs"=>0, "etr"=>"", "etrmillis"=>-9}]}}} 
+  ```
+  
 == Requirements
 
 * HTTParty
