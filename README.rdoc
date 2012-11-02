@@ -1,3 +1,7 @@
+= NOTICE
+
+Work on this project has moved to https://github.com/ckundo/sandy
+
 = coned
 
 This gem consumes a feed of realtime outage data for NYC from the Con Ed website.
