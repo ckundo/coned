@@ -1,1 +1,1 @@
-= This project has moved to https://github.com/ckundo/sandy
+## This project has moved to https://github.com/ckundo/sandy
